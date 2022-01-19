@@ -1,0 +1,16 @@
+@import 'core';
+
+.logo {
+  width: fit-content;
+  @include flex(flex-start, center);
+  cursor: pointer;
+  &__icon {
+    @include size(35px);
+    fill: $WHITE;
+    margin-right: 5px;
+  }
+  &__text {
+    @include text(rem(15px), 600, $WHITE);
+    line-height: 133%;
+  }
+}

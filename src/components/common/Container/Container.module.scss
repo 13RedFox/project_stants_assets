@@ -1,0 +1,13 @@
+@import 'core';
+
+.container {
+  padding-left: $PADDING_MOBILE;
+  padding-right: $PADDING_MOBILE;
+  max-width: $screen-hd;
+  width: 100%;
+  margin: 0 auto;
+  @include media {
+    padding-left: $PADDING_DESKTOP;
+    padding-right: $PADDING_DESKTOP;
+  }
+}
