@@ -1,0 +1,31 @@
+@import 'core';
+
+.button {
+  width: fit-content;
+  min-width: 160px;
+  @include text(rem(16px), 600, $WHITE);
+  line-height: 225%;
+  text-transform: uppercase;
+  background-color: $GREEN;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  @include transition(background-color);
+  cursor: pointer;
+  &:hover {
+    background-color: #0f874d;
+  }
+  &:active {
+    background-color: #07ad5d;
+  }
+}
+
+.secondary {
+  background-color: transparent;
+  border-color: $GREEN;
+  color: $GREEN;
+  @include transition(color, border-color, background-color);
+  &:hover {
+    color: $WHITE;
+    border-color: transparent;
+  }
+}
