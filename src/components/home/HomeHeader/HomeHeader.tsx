@@ -39,8 +39,7 @@ export const HomeHeader: FC = () => {
         modules={[Autoplay]}
         slidesPerView={1}
         loop
-        // autoplay={{ delay: 2500, disableOnInteraction: false }}
-      >
+        autoplay={{ delay: 2500, disableOnInteraction: false }}>
         {[] &&
           slides.map((slide) => (
             <SwiperSlide key={slide.id}>
