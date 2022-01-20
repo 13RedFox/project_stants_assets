@@ -1,11 +1,10 @@
 import type { NextPage } from 'next';
-import { Button } from '../src/components/common';
+import { TheNavigation } from '../src/components/TheNavigation';
 
 const Home: NextPage = () => {
   return (
     <>
-      <h1>Starting project</h1>
-      <Button>Button</Button>
+      <TheNavigation />
     </>
   );
 };

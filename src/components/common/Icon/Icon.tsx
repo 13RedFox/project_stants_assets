@@ -3,9 +3,10 @@ import { FC } from 'react';
 export interface IconProps {
   name: string;
   className?: string;
+  onClick?: () => void;
 }
 
-export const Icon: FC<IconProps> = ({ name, className }) => {
+export const Icon: FC<IconProps> = ({ name, className, onClick }) => {
   switch (name) {
     case 'logo': {
       return (
@@ -16,6 +17,19 @@ export const Icon: FC<IconProps> = ({ name, className }) => {
           <path d="M24.9815 21.2745H19L13.7222 29.5098H3.16667L0 34.6569L17.2407 35L24.9815 21.2745Z" />
           <path d="M27.0926 24.0196H24.6296L21.463 29.5098H30.2593L27.0926 24.0196Z" />
           <path d="M11.2593 26.7647L8.09259 21.6176L3.51852 28.1373H10.2037L11.2593 26.7647Z" />
+        </svg>
+      );
+    }
+    case 'burger': {
+      return (
+        <svg
+          className={className}
+          onClick={onClick}
+          viewBox="0 0 26 20"
+          xmlns="http://www.w3.org/2000/svg">
+          <rect width="26" height="4" rx="2" />
+          <rect y="8" width="26" height="4" rx="2" />
+          <rect y="16" width="26" height="4" rx="2" />
         </svg>
       );
     }

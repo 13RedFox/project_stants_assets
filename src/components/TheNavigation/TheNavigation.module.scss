@@ -1,0 +1,76 @@
+@import 'core';
+
+.nav {
+  position: relative;
+  background-color: rgba(33, 33, 33, 0.3);
+  box-shadow: 0px 4px 12px rgba(24, 9, 96, 0.1);
+  padding: 20px 0;
+  &__header {
+    width: 100%;
+    max-width: 1000px;
+    display: none;
+
+    @include media($screen-desktop-large) {
+      @include flex(space-between, center);
+    }
+  }
+  &__list {
+    width: 100%;
+    max-width: 696px;
+    @include flex(space-between, center);
+  }
+  &__link {
+    @include text(rem(16px), 700, $WHITE);
+    line-height: 225%;
+    @include transition(color);
+    &:hover {
+      color: $HOVER_LINK;
+    }
+  }
+  &__button {
+    color: $WHITE;
+    border-color: $WHITE;
+  }
+  &__burger {
+    display: block;
+    @include size(26px);
+    fill: $WHITE;
+    cursor: pointer;
+    @include transition(fill);
+    &:hover {
+      fill: $HOVER_LINK;
+    }
+    @include media($screen-desktop-large) {
+      display: none;
+    }
+  }
+  &__mobile {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100vh;
+    background-color: $WHITE;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 15px 5px $GREEN;
+    padding: 20px;
+    @include transition(left);
+    &_close {
+      display: flex;
+      justify-content: flex-end;
+      @include text(rem(14px), 600, $GREEN);
+      margin-bottom: 20px;
+    }
+    @include media($screen-desktop-large) {
+      display: none;
+    }
+  }
+
+  .mobile {
+    left: 0;
+  }
+  .container {
+    @include flex(space-between, center);
+  }
+}

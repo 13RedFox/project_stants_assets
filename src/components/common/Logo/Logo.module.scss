@@ -2,6 +2,7 @@
 
 .logo {
   width: fit-content;
+  min-width: 207px;
   @include flex(flex-start, center);
   cursor: pointer;
   &__icon {
@@ -9,8 +10,19 @@
     fill: $WHITE;
     margin-right: 5px;
   }
+  &:hover &__text {
+    color: $HOVER_LINK;
+  }
   &__text {
+    display: none;
     @include text(rem(15px), 600, $WHITE);
     line-height: 133%;
+    @include transition(color);
+    &:hover {
+      color: $HOVER_LINK;
+    }
+    @include media($screen-tablet-small) {
+      display: block;
+    }
   }
 }
