@@ -14,15 +14,11 @@
     color: $HOVER_LINK;
   }
   &__text {
-    display: none;
     @include text(rem(15px), 600, $WHITE);
     line-height: 133%;
     @include transition(color);
     &:hover {
       color: $HOVER_LINK;
-    }
-    @include media($screen-tablet-small) {
-      display: block;
     }
   }
 }

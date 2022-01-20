@@ -44,6 +44,13 @@
       display: none;
     }
   }
+  .checked {
+    fill: $BLUE_MEDIUM1;
+    @include transition(fill);
+    &:hover {
+      fill: $HOVER_LINK;
+    }
+  }
   &__mobile {
     position: absolute;
     top: 0;
@@ -61,6 +68,30 @@
       justify-content: flex-end;
       @include text(rem(14px), 600, $GREEN);
       margin-bottom: 20px;
+    }
+    &_menu {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin: auto 0;
+      .nav__list {
+        flex-direction: column;
+        margin-bottom: 30px;
+      }
+      .nav__link {
+        color: $BLUE_MEDIUM1;
+        &:hover {
+          color: $HOVER_LINK;
+        }
+      }
+      .nav__button {
+        color: $GREEN;
+        border-color: $GREEN;
+        &:hover {
+          color: $WHITE;
+          border-color: transparent;
+        }
+      }
     }
     @include media($screen-desktop-large) {
       display: none;
