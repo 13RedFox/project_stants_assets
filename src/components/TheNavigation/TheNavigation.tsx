@@ -6,11 +6,9 @@ import styles from './TheNavigation.module.scss';
 export const TheNavigation: FC = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
 
-  const onShowMenu = () => {
+  const onShowMenu = (): void => {
     setShowMenu((prevState) => !showMenu);
   };
-
-  console.log(showMenu);
 
   return (
     <nav className={styles.nav}>
