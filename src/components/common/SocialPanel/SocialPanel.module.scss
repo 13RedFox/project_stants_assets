@@ -1,0 +1,39 @@
+@import 'core';
+
+.social {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  flex-direction: column;
+  display: none;
+  box-shadow: 0px 2px 12px 1px rgba(29, 51, 107, 0.25);
+  border-radius: 3px;
+  overflow: hidden;
+  z-index: 3;
+  @include media($screen_tablet-small) {
+    display: flex;
+  }
+  &__link {
+    background-color: $WHITE;
+    @include size(48px);
+    @include flex(center, center);
+    border-bottom: 1px solid rgba($BLUE, 0.1);
+    cursor: pointer;
+    &:nth-last-child {
+      border-bottom-color: transparent;
+    }
+    &:hover &_icon {
+      path {
+        fill: $HOVER_LINK;
+      }
+    }
+    &_icon {
+      @include size(24px);
+      path {
+        @include transition(fill);
+        fill: $BLUE_MEDIUM1;
+      }
+    }
+  }
+}
