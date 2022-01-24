@@ -1,0 +1,66 @@
+@import 'core';
+
+.technologies {
+  padding-top: 54px;
+  @include media($screen-tablet) {
+    padding-top: 120px;
+  }
+  &__title {
+    @include text(rem(24px), 700, $BLUE);
+    line-height: 108%;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 23px;
+    @include media($screen-tablet-small) {
+      font-size: rem(36px);
+      margin-bottom: 60px;
+    }
+  }
+  &__description {
+    width: 100%;
+    max-width: 900px;
+    @include text(rem(18px), 400, $BLACK);
+    line-height: 158%;
+    text-align: center;
+    margin: 0 auto 24px;
+    &_first {
+      font-weight: 700;
+      color: #00a4e8;
+    }
+    &_second {
+      font-weight: 700;
+      color: $BLUE;
+    }
+    @include media($screen-tablet-small) {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+  }
+  &__wrapper {
+    width: 100%;
+    max-width: 350px;
+    @include flex(space-between, center);
+    margin: 0 auto 24px;
+    @include media($screen-tablet-small) {
+      margin-bottom: 30px;
+    }
+    &_icons {
+      @include size(64px);
+      @include flex(center, center);
+      box-shadow: 0px 4px 12px rgba(41, 24, 111, 0.2);
+      border-radius: 16px;
+    }
+    &_icon {
+      @include size(40px);
+      fill: $WHITE;
+    }
+  }
+  &__subdescr {
+    @include text(rem(18px), 400, $DARK);
+    line-height: 158%;
+    text-align: center;
+    @include media($screen-tablet-small) {
+      font-size: rem(24px);
+    }
+  }
+}
