@@ -1,0 +1,52 @@
+@import 'core';
+
+.review {
+  margin-bottom: 54px;
+  @include media($screen-tablet) {
+    margin-bottom: 120px;
+  }
+  &__wrapper {
+    width: 100%;
+    max-width: 900px;
+    @include flex-col(flex-start, center);
+    background-color: $WHITE;
+    box-shadow: 0px 3px 16px 2px rgba(29, 51, 107, 0.15);
+    border-radius: 16px;
+    padding: 29px 33px 35px;
+    margin: 0 auto;
+    @include media($screen_tablet) {
+      @include flex-row(space-between, center);
+    }
+    &_btn {
+      padding: 0 20px;
+    }
+  }
+  &__inner {
+    width: 100%;
+    max-width: 290px;
+    @include flex(center, center);
+    margin: 30px 0 40px;
+    @include media($screen-tablet) {
+      margin: 0;
+    }
+    &_rating {
+      display: block;
+      @include text(rem(18px), 600, $DARK);
+      line-height: 138%;
+      margin-right: 10px;
+    }
+    &_icon {
+      @include size(24px);
+      fill: $GREEN;
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    &_descr {
+      @include flex(rem(16px), 400, $DARK);
+      line-height: 162%;
+      margin-left: 10px;
+    }
+  }
+}
