@@ -1,0 +1,11 @@
+@import 'core';
+
+.icon {
+  @include size(24px);
+  @include transition(all);
+  margin-right: 10px;
+  cursor: pointer;
+  &:last-child {
+    margin-right: 0;
+  }
+}

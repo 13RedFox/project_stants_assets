@@ -34,14 +34,7 @@
       @include text(rem(18px), 600, $DARK);
       line-height: 138%;
       margin-right: 10px;
-    }
-    &_icon {
-      @include size(24px);
-      fill: $GREEN;
-      margin-right: 10px;
-      &:last-child {
-        margin-right: 0;
-      }
+      @include transition(all);
     }
     &_descr {
       @include flex(rem(16px), 400, $DARK);
