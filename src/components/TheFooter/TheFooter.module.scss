@@ -1,0 +1,24 @@
+@import 'core';
+
+.footer {
+  background-color: $BLUE;
+  .container {
+    @include flex-col(flex-start, center);
+    @include media($screen-tablet-small) {
+      @include flex-row(space-between, center);
+    }
+  }
+  &__left {
+    width: 100%;
+    @include flex-col();
+    @include media($screen-tablet-small) {
+      max-width: 220px;
+    }
+    &_logo {
+      margin: 0 auto 50px;
+      @include media($screen-tablet-small) {
+        margin-bottom: 50px;
+      }
+    }
+  }
+}

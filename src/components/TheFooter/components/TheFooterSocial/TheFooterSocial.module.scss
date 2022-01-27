@@ -1,0 +1,36 @@
+@import 'core';
+
+.social {
+  width: 100%;
+  @include flex(space-between, center);
+  @include media($screen-tablet-small) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  &__item {
+    @include media($screen-tablet-small) {
+      margin-right: 45px;
+      margin-bottom: 40px;
+      &:nth-child(3n + 3) {
+        margin-right: 0;
+      }
+      &:nth-last-child(-n + 2) {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__link {
+    display: flex;
+  }
+  &__icon {
+    @include size(32px);
+    @include transition(fill);
+    fill: $WHITE;
+    &:hover {
+      fill: $GREEN_LIGHT;
+    }
+    @include media($screen-tablet-small) {
+      @include size(40px);
+    }
+  }
+}

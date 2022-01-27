@@ -2,13 +2,18 @@
 
 .logo {
   width: fit-content;
-  min-width: 207px;
   @include flex(flex-start, center);
   cursor: pointer;
+  @include media($screen-tablet-small) {
+    min-width: 207px;
+  }
   &__icon {
     @include size(35px);
     fill: $WHITE;
     margin-right: 5px;
+    @include media($screen_tablet) {
+      @include size(51px);
+    }
   }
   &:hover &__text {
     color: $HOVER_LINK;
@@ -19,6 +24,10 @@
     @include transition(color);
     &:hover {
       color: $HOVER_LINK;
+    }
+    @include media($screen_tablet) {
+      font-size: 22px;
+      line-height: 136%;
     }
   }
 }
