@@ -2,17 +2,20 @@
 
 .footer {
   background-color: $BLUE;
+  padding-top: 80px;
   .container {
     @include flex-col(flex-start, center);
     @include media($screen-tablet-small) {
-      @include flex-row(space-between, center);
+      @include flex-row(space-between, flex-start);
     }
   }
   &__left {
     width: 100%;
-    @include flex-col();
+    margin-bottom: 65px;
+    @include flex-col(flex-start, center);
     @include media($screen-tablet-small) {
       max-width: 220px;
+      margin-bottom: 0;
     }
     &_logo {
       margin: 0 auto 50px;

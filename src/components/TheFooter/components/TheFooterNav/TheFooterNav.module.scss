@@ -17,7 +17,11 @@
 .nav {
   width: 100%;
   max-width: 940px;
-  @include flex(space-between, flex-start);
+  // @include flex-col();
+  @include media($screen-tablet-small) {
+    @include flex-row(space-between, flex-start);
+    padding-top: 15px;
+  }
 }
 .subnav,
 .subnavi {
@@ -26,6 +30,7 @@
 }
 .subnav {
   padding-left: 20px;
+  margin-bottom: 20px;
   &__item {
     margin-bottom: 18px;
     &:last-child {
