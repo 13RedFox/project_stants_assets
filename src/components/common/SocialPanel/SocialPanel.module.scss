@@ -11,7 +11,7 @@
   border-radius: 3px;
   overflow: hidden;
   z-index: 3;
-  @include media($screen_tablet-small) {
+  @include media($screen_netbook) {
     display: flex;
   }
   &__link {

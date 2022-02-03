@@ -3,12 +3,12 @@
 .social {
   width: 100%;
   @include flex(space-between, center);
-  @include media($screen-tablet-small) {
+  @include media($screen-netbook) {
     flex-wrap: wrap;
     justify-content: flex-start;
   }
   &__item {
-    @include media($screen-tablet-small) {
+    @include media($screen-netbook) {
       margin-right: 45px;
       margin-bottom: 40px;
       &:nth-child(3n + 3) {

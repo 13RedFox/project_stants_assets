@@ -2,24 +2,25 @@
 
 .footer {
   background-color: $BLUE;
-  padding-top: 80px;
+  padding-top: 40px;
   .container {
     @include flex-col(flex-start, center);
-    @include media($screen-tablet-small) {
+    @include media($screen-netbook) {
       @include flex-row(space-between, flex-start);
+      padding-top: 80px;
     }
   }
   &__left {
     width: 100%;
     margin-bottom: 65px;
     @include flex-col(flex-start, center);
-    @include media($screen-tablet-small) {
+    @include media($screen-netbook) {
       max-width: 220px;
       margin-bottom: 0;
     }
     &_logo {
-      margin: 0 auto 50px;
-      @include media($screen-tablet-small) {
+      margin: 0 auto 40px;
+      @include media($screen-tablet) {
         margin-bottom: 50px;
       }
     }
